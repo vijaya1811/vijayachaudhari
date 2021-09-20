@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Book</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="icon" href="images/favicon.png" type="icon" />
+        <noscript><link rel="stylesheet" href="../css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Header -->
+            <header id="header">
+                <div class="inner">
+                    <!-- Logo -->
+                    <a href="index" class="logo"> <span class="fa fa-book"></span> <span class="title">Online Book Store </span> </a>
+                    <!-- Nav -->
+                    <nav>
+                        <ul>
+                            <li><a href="#menu">Menu</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- Menu -->
+            <nav id="menu">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="products">Books</a></li>
+                    <li><a href="/user_detail">User Detail</a></li>
+                    <li><a href="bookdetails" class="active">Purchase Book</a></li>
+                    <li><a href="/login">Adminstration</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">About</a>
+                        <ul>
+                            <li><a href="about">About Us</a></li>
+                            <li><a href="blog">Blog</a></li>
+                            <li><a href="testimonials">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- Main -->
+            <div class="inner">
+                <section>
+                    <form method="post" action="/save">
+                        <div class="fields">
+                            <div class="field half">
+                                <input type="number" name="bookid" id="field-0" placeholder="BookId" />
+                            </div>
+                            <div class="field half">
+                                <input type="text" name="bookname" id="field-1" placeholder="BookName" />
+                            </div>
+                            <div class="field half">
+                                <input type="text" name="catagory" id="field-2" placeholder="Category" />
+                            </div>
+                            <div class="field half">
+                                <input type="text" name="author" id="field-3" placeholder="Author" />
+                            </div>
+                            <div class="field half">
+                                <input type="text" name="price" id="field-4" placeholder="Price" />
+                            </div>
+                            <div class="field half text-right">
+                                <ul class="actions">
+                                    <li><input type="submit" value="Add" class="primary" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <ul class="copyright">
+                    <li>Copyright © 2021 Online Book Store</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

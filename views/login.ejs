@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Administration Login</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <link rel="icon" href="/images/favicon.png" type="icon" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Header -->
+            <header id="header">
+                <div class="inner">
+                    <!-- Logo -->
+                    <a href="index" class="logo"> <span class="fa fa-book"></span> <span class="title">Online Book Store</span> </a>
+
+                    <!-- Nav -->
+                    <nav>
+                        <ul>
+                            <li><a href="#menu">Menu</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- Menu -->
+            <nav id="menu">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="/index" class="active">Home</a></li>
+                    <li><a href="/products">Books</a></li>
+                    <li><a href="/checkout">Checkout Book</a></li>
+                    <li><a href="/login">Adminstration</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">About</a>
+                        <ul>
+                            <li><a href="about">About Us</a></li>
+                            <li><a href="blog">Blog</a></li>
+                            <li><a href="testimonials">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </head>
+        <style>
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(159, 249, 255);
+                padding-top: 20px;
+                padding-left: 10px;
+                width: 550px;
+                height: 300px;
+                margin: auto;
+                font-size: 18px;
+                font-weight: bold;
+                color:rgb(35, 9, 184) ;
+                gap: 8px;
+                border-radius: 10px;
+                border: 1px solid rgb(82, 224, 224);
+            }
+            .btn1
+            {
+                background-color: white;
+                padding-bottom: 20px;
+            }
+        </style>
+        <script>
+            function login() {
+                var pass = document.getElementById("pass").value;
+                var flag = 0;
+                if (pass == "admin") {
+                    document.getElementById("res").innerHTML = "password correct!";
+                    // Create anchor element.
+                    var a = document.createElement('a'); 
+                    // Create the text node for anchor element.
+                    var link = document.createTextNode("Login");
+                    // Append the text node to anchor element.
+                    a.appendChild(link); 
+                    // Set the title.
+                    a.title = "Login"; 
+                    // Set the href property.
+                    a.href = "admin"; 
+                    // Append the anchor element to the body.
+                    document.body.appendChild(a); 
+                }
+                else{
+                    document.getElementById("res").innerHTML = "password wrong!";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="name">
+            Name:<input type="text" placeholder="Enter admin name" id="name" /><br />
+            Password:<input type="password" placeholder="Enter admin password" id="pass" /><br />
+            <button class="btn1" onclick="login()">Login</button></a>
+            <p id="res"></p>
+        </div>
+    </body>
+     <!-- Scripts -->
+     <script src="assets/js/jquery.min.js"></script>
+     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <script src="assets/js/jquery.scrolly.min.js"></script>
+     <script src="assets/js/jquery.scrollex.min.js"></script>
+     <script src="assets/js/main.js"></script>
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
+</html>

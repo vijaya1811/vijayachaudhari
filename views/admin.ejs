@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book details</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <link rel="icon" href="/images/favicon.png" type="icon" />
+        <noscript>
+            <link rel="stylesheet" href="assets/css/noscript.css" />
+        </noscript>
+        <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Header -->
+            <header id="header">
+                <div class="inner">
+                    <!-- Logo -->
+                    <a href="index" class="logo"> <span class="fa fa-book"></span> <span class="title">Online Book
+                            Store</span> </a>
+                    <!-- Nav -->
+                    <nav>
+                        <ul>
+                            <li><a href="#menu">Menu</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- Menu -->
+            <nav id="menu">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="/index" class="active">Home</a></li>
+                    <li><a href="/products">Books</a></li>
+                    <li><a href="/addbook">AddBook</a></li>
+                    <li><a href="/user_detail">User Detail</a></li>
+                    <li><a href="/checkout">Purchase Book</a></li>
+                    <li><a href="/login">Adminstration</a></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">About</a>
+                        <ul>
+                            <li><a href="about">About Us</a></li>
+                            <li><a href="blog">Blog</a></li>
+                            <li><a href="testimonials">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        <style>
+            h2 {
+                text-align: center;
+                color: rgb(5, 48, 238);
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th {
+                background-color: rgb(100, 250, 250);
+            }
+            th,
+            td {
+                border-collapse: collapse;
+                padding: 3px;
+                text-align: left;
+                border: 2px solid rgb(190, 190, 190);
+            }
+            .btn1 {
+              background-color: rgb(58, 177, 34);
+              margin: 0%;
+              padding: 0%;
+              width: 52px;
+              height: 32px;
+              font-size: 12px;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            .btn2 {
+              background-color: rgb(46, 184, 248);
+              width: 90px;
+              height: 32px;
+              font-size: 10px;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            div {
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            <%= title %>
+        </h2>
+        <a href="/addbook/"><button class="btn2">Add Book</button></a>
+        <a href="/user_detail/"><button class="btn2">User Detail</button></a>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>BookId</th>
+                        <th>Bookname</th>
+                        <th>Category</th>
+                        <th>Author</th>
+                        <th>Price</th>
+                        <th>Operation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% book.forEach(function(book){ %>
+                        <tr>
+                            <td>
+                                <%= book.bookid %>
+                            </td>
+                            <td>
+                                <%= book.bookname %>
+                            </td>
+                            <td>
+                                <%= book.catagory %>
+                            </td>
+                            <td>
+                                <%= book.author %>
+                            </td>
+                            <td>
+                                <%= book.price %>
+                            </td>
+                            <td>
+                                <a href="/bookuser_edit/<%= book.bookid %>"><button class="btn1">Edit</button></a>
+                                <a href="delete/<%= book.bookid %>"><i class="fa fa-trash"></i></a>
+                            </td>
+                            </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+            <a href="/save"></a>
+        </div>
+    </body>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+</html>

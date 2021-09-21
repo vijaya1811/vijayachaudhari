@@ -42,6 +42,10 @@ app.use(express.urlencoded({ extended: true }));
 //     });
 //  });
 
+app.get("/", (req, res) => {
+    res.render("index", {});
+});
+
 //after user clicks on save button - insert the record in table
 app.post("/save", (req, res) => {
     let data = { bookid: req.body.bookid, bookname: req.body.bookname, catagory: req.body.catagory, author: req.body.author, price: req.body.price };
@@ -105,9 +109,9 @@ app.get("/terms", (req, res) => {
     res.render("terms", {});
 });
 
-app.get("/", (req, res) => {
-    res.render("index", {});
-});
+// app.get("/", (req, res) => {
+//     res.render("index", {});
+// });
 
 app.get("/login", (req, res) => {
     res.render("login", {});
